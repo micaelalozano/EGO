@@ -1,0 +1,161 @@
+.h1-modelos {
+  display: flex;
+  padding: 2em 3.8em;
+  color: #444;
+}
+
+.modelos-contenedor-general {
+  display: flex;
+  height: 35px;
+  margin: 0em 7.6em;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: solid rgba(175, 172, 172, 0.37) 1px;
+}
+
+.modelos-contenedor-uno {
+  display: flex;
+  flex-direction: row;
+}
+
+.modelos-li-uno {
+  display: flex;
+  text-align: end;
+  color: #444;
+  font-weight: 600;
+  font-size: 13.7px;
+  margin-right: 40px;
+  padding: 5px;
+}
+
+.modelos-li {
+  color: #555;
+  font-size: 13.7px;
+  margin-right: 15px;
+  cursor: pointer;
+  padding: 5px 15px;
+}
+
+.modelos-li.selected {
+  position: relative;
+  color: #555;
+  background-color: rgb(235, 235, 235);
+  border-radius: 50px;
+  height: fit-content;
+}
+
+.btn-more {
+  display: flex;
+  text-align: end;
+  background-color: white;
+  color: #444;
+  font-weight: 600;
+  font-size: 13.7px;
+  padding: 5px;
+  border: none;
+  cursor: pointer;
+}
+
+/*{DROPDOWN}*/
+
+.dropdown-container {
+  position: relative;
+}
+
+.dropdown-list {
+  width: 200%;
+  margin-top: 0px;
+  background-color: white;
+  color: #333;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  position: absolute;
+  right: 0%;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.192) 0px 5px 15px 0px;
+}
+
+.dropdown-li-x {
+  font-size: 13px;
+  padding: 1em;
+  border-bottom: rgba(68, 68, 68, 0.247) solid 1px;
+  background-color: whitesmoke;
+}
+
+.dropdown-li {
+  font-size: 13px;
+  padding: 1em;
+  border-bottom: rgba(68, 68, 68, 0.247) solid 1px;
+}
+
+.dropdown-li-uno {
+  font-size: 13px;
+  padding: 1em;
+}
+
+.dropdown-span {
+  color: #333;
+  font-weight: 600;
+}
+
+/*{ICONOS}*/
+
+.more-icon {
+  display: none;
+}
+
+.btn-more-icon {
+  margin-left: 3px;
+}
+
+/*{HOVERS}*/
+
+.dropdown-li:hover {
+  background-color: whitesmoke;
+}
+
+.dropdown-li:hover {
+  background-color: whitesmoke;
+}
+
+.dropdown-li-uno:hover {
+  background-color: whitesmoke;
+}
+
+@media screen and (max-width: 1000px) {
+  .h1-modelos {
+    display: flex;
+    padding: 0.5em 1em;
+  }
+
+  .modelos-contenedor-general {
+    margin: 0em 2em;
+  }
+
+  .modelos-li {
+    display: none;
+  }
+
+  .modelos-li-uno {
+    font-size: 13px;
+    margin-right: 0px;
+    cursor: pointer;
+  }
+
+  .btn-more {
+    font-size: 13px;
+  }
+
+  /*{DROPDOWN}*/
+
+  .dropdown-list {
+    margin-top: 2px;
+  }
+
+  /*{ICONOS}*/
+
+  .more-icon {
+    display: initial;
+    margin-left: 3px;
+  }
+}
