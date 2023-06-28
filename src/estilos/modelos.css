@@ -16,6 +16,7 @@
 .modelos-contenedor-uno {
   display: flex;
   flex-direction: row;
+  position: relative;
 }
 
 .modelos-li-uno {
@@ -54,6 +55,22 @@
   padding: 5px;
   border: none;
   cursor: pointer;
+}
+
+/*{DROPDOWN FILTER}*/
+
+.dropdown-filter {
+  width: 150%;
+  max-width: 200px;
+  margin-top: 27px;
+  background-color: white;
+  color: #333;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+  position: absolute;
+  left: 0%;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.192) 0px 5px 15px 0px;
 }
 
 /*{DROPDOWN}*/
