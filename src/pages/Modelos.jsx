@@ -1,11 +1,16 @@
 import React, { useState, useEffect, useRef } from "react";
 import { MdExpandMore } from "react-icons/md";
 import { MdExpandLess } from "react-icons/md";
+import AutosOnly from "../components/AutosOnly";
+import ListaDeAutos from "../components/ListaDeAutos";
+import PickupsyComerciales from "../components/PickupsyComerciales";
+import SUVsyCrossovers from "../components/SUVsyCrossovers";
 //Estilos
 import "../estilos/modelos.css";
 
 const Modelos = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isOpenFilter, setIsOpenFilter] = useState(false);
   const dropdownRef = useRef(null);
   const [selectedItem, setSelectedItem] = useState("Todos");
 
@@ -17,6 +22,7 @@ const Modelos = () => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
         setIsOpen(false);
+        setIsOpenFilter(false);
       }
     };
 
@@ -31,15 +37,50 @@ const Modelos = () => {
     setIsOpen(!isOpen);
   };
 
+  const toggleDropdownX = () => {
+    if (window.innerWidth <= 1000) {
+      setIsOpenFilter(!isOpenFilter);
+    }
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth < 1000) {
+        setIsOpenFilter(false);
+      } else {
+        setIsOpenFilter(false);
+        setIsOpen(false);
+      }
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+
   return (
     <>
       <h1 className="h1-modelos">Descubrí todos los modelos</h1>
       <div className="modelos-contenedor-general">
         <div className="modelos-contenedor-uno">
-          <li className="modelos-li-uno">
+          <li className="modelos-li-uno" onClick={toggleDropdownX}>
             Filtrar por
-            <MdExpandMore size={14} color="#444" className="more-icon" />
+            {isOpenFilter ? (
+              <MdExpandLess size={14} color="#444" className="more-icon" />
+            ) : (
+              <MdExpandMore size={14} color="#444" className="more-icon" />
+            )}
           </li>
+          {isOpenFilter && (
+            <ul className="dropdown-filter">
+              <li>Todos</li>
+              <li>Autos</li>
+              <li>Pickups y Comerciales</li>
+              <li>SUVs y Crossovers</li>
+            </ul>
+          )}
           <li
             className={`modelos-li ${
               selectedItem === "Todos" ? "selected" : ""
@@ -103,6 +144,10 @@ const Modelos = () => {
           )}
         </div>
       </div>
+      {selectedItem === "Todos" && <ListaDeAutos />}
+      {selectedItem === "Autos" && <AutosOnly />}
+      {selectedItem === "Pickups y Comerciales" && <PickupsyComerciales />}
+      {selectedItem === "SUVs y Crossovers" && <SUVsyCrossovers />}
     </>
   );
 };
