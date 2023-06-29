@@ -1,0 +1,91 @@
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  background-color: rgb(226, 226, 226);
+  padding: 2em 1em;
+  margin-top: 1em;
+  margin-bottom: 2em;
+}
+
+.carousel {
+  display: flex;
+  transition: transform 0.3s ease;
+}
+
+.slide {
+  flex: 0 0 25%;
+  max-width: 25%;
+  padding: 0 10px;
+  box-sizing: border-box;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 3%;
+}
+
+.slide-content {
+  padding: 0px 5px;
+  margin-top: 10px;
+}
+
+.image-title {
+  color: #222;
+  margin-bottom: 7px;
+}
+
+.image-text {
+  font-size: 15px;
+  color: #555;
+}
+
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 24px;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media screen and (max-width: 640px) {
+  .carousel-container {
+    padding: 1em;
+  }
+
+  .carousel {
+    flex-wrap: nowrap;
+  }
+
+  .slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+@media screen and (max-width: 840px) {
+  .image-title {
+    font-size: 15px;
+    color: #222;
+    margin-bottom: 7px;
+  }
+
+  .image-text {
+    font-size: 13px;
+    color: #555;
+  }
+}

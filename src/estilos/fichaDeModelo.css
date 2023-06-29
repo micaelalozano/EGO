@@ -1,0 +1,123 @@
+.fm-contenedor-general {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.img-car {
+  max-width: 680px;
+  width: 100%;
+  height: auto;
+  margin-right: 3em;
+}
+
+.texto-contenedor {
+  padding-top: 6em;
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+
+.hilux {
+  color: #444;
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.title-h1 {
+  color: #222;
+  font-size: 40px;
+}
+
+.h-texto {
+  color: #666;
+  line-height: 1.5;
+  margin-top: 1em;
+  width: 400px;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 999px) {
+  .fm-contenedor-general {
+    display: flex;
+    flex-direction: column;
+    justify-content: none;
+  }
+
+  .img-car {
+    width: 100%;
+    height: auto;
+    margin-right: 0em;
+  }
+
+  .texto-contenedor {
+    padding: 1em 2em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hilux {
+    color: #444;
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .title-h1 {
+    color: #222;
+    font-size: 30px;
+  }
+
+  .h-texto {
+    color: #666;
+    line-height: 1.5;
+    margin-top: 0.5em;
+    width: 100%;
+    font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1300px) {
+  .fm-contenedor-general {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .img-car {
+    max-width: 550px;
+    width: 100%;
+    height: auto;
+    margin-right: 3em;
+  }
+
+  .texto-contenedor {
+    padding-top: 4em;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .hilux {
+    color: #444;
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 5px;
+  }
+
+  .title-h1 {
+    color: #222;
+    font-size: 30px;
+  }
+
+  .h-texto {
+    color: #666;
+    line-height: 1.5;
+    margin-top: 1em;
+    width: 350px;
+    font-size: 14px;
+  }
+}
