@@ -60,7 +60,7 @@
 /*{DROPDOWN FILTER}*/
 
 .dropdown-filter {
-  width: 150%;
+  width: 200%;
   max-width: 200px;
   margin-top: 27px;
   background-color: white;
@@ -71,6 +71,19 @@
   left: 0%;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.192) 0px 5px 15px 0px;
+}
+
+.filer-li-x {
+  font-size: 13px;
+  padding: 1em;
+  border-bottom: rgba(68, 68, 68, 0.247) solid 1px;
+  background-color: whitesmoke;
+}
+
+.filer-li {
+  font-size: 13px;
+  padding: 1em;
+  border-bottom: rgba(68, 68, 68, 0.247) solid 1px;
 }
 
 /*{DROPDOWN}*/
@@ -136,6 +149,10 @@
 }
 
 .dropdown-li-uno:hover {
+  background-color: whitesmoke;
+}
+
+.filer-li:hover {
   background-color: whitesmoke;
 }
 

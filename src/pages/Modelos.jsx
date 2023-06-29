@@ -75,10 +75,10 @@ const Modelos = () => {
           </li>
           {isOpenFilter && (
             <ul className="dropdown-filter">
-              <li>Todos</li>
-              <li>Autos</li>
-              <li>Pickups y Comerciales</li>
-              <li>SUVs y Crossovers</li>
+              <li className="filer-li-x">Todos</li>
+              <li className="filer-li">Autos</li>
+              <li className="filer-li">Pickups y Comerciales</li>
+              <li className="filer-li">SUVs y Crossovers</li>
             </ul>
           )}
           <li
