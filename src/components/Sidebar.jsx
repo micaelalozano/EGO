@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { CgClose } from "react-icons/cg";
+import { Link } from "react-router-dom";
+//Estilos
 import "../estilos/sidebar.css";
 
 const Sidebar = ({ onClose }) => {
@@ -26,7 +28,9 @@ const Sidebar = ({ onClose }) => {
         <CgClose size={20} cursor="pointer" color="#333" onClick={onClose} />
       </div>
       <ul className="ul-uno">
-        <li className="li-individual">Modelos</li>
+        <Link to="/Modelos">
+          <li className="li-individual">Modelos</li>
+        </Link>
         <li className="li-individual">Servicios y Accesorios</li>
         <li className="li-individual">Financiacion</li>
         <li className="li-individual">Reviews y Comunidad</li>
