@@ -73,4 +73,8 @@
   .logo {
     padding-right: 0px;
   }
+
+  .menu {
+    display: none;
+  }
 }
